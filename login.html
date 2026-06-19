@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Log in or register for FitForge.">
+  <title>Login | FitForge</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="auth-page" data-auth-page="true">
+  <div class="auth-shell">
+    <header class="auth-header">
+      <a class="logo" href="login.html"><i class="fas fa-dumbbell"></i> FitForge</a>
+      <button class="theme-btn" id="themeBtn" type="button">
+        <i class="fas fa-moon" id="themeIcon"></i>
+        <span id="themeLabel">Dark</span>
+      </button>
+    </header>
+
+    <main class="auth-layout">
+      <section class="auth-visual" aria-label="FitForge training inspiration">
+        <span class="auth-kicker"><i class="fas fa-bolt"></i> Built for progress</span>
+        <h1>Forge your strongest self.</h1>
+        <p>One account for personalised workouts, nutrition tools, saved plans, and your FitBot training companion.</p>
+      </section>
+
+      <section class="auth-panel" aria-labelledby="authTitle">
+        <h2 id="authTitle">Welcome back</h2>
+        <p id="authIntro">Sign in to continue to your workouts and tools.</p>
+
+        <div class="auth-tabs" role="tablist" aria-label="Account access">
+          <button class="auth-tab active" type="button" role="tab" data-auth-mode="login" aria-selected="true">Log in</button>
+          <button class="auth-tab" type="button" role="tab" data-auth-mode="register" aria-selected="false">Register user</button>
+        </div>
+
+        <form class="auth-form" id="authForm" novalidate>
+          <div class="auth-field" id="nameField" hidden>
+            <label for="fullName">Full name</label>
+            <input id="fullName" name="fullName" type="text" autocomplete="name" maxlength="80" placeholder="Your name">
+          </div>
+
+          <div class="auth-field">
+            <label for="authEmail">Email address</label>
+            <input id="authEmail" name="email" type="email" autocomplete="email" required placeholder="you@example.com">
+          </div>
+
+          <div class="auth-field">
+            <label for="authPassword">Password</label>
+            <div class="password-wrap">
+              <input id="authPassword" name="password" type="password" autocomplete="current-password" minlength="6" required placeholder="At least 6 characters">
+              <button class="password-toggle" type="button" data-password-toggle="authPassword" aria-label="Show password"><i class="fas fa-eye"></i></button>
+            </div>
+          </div>
+
+          <div class="auth-field" id="confirmField" hidden>
+            <label for="confirmPassword">Confirm password</label>
+            <div class="password-wrap">
+              <input id="confirmPassword" name="confirmPassword" type="password" autocomplete="new-password" minlength="6" placeholder="Repeat your password">
+              <button class="password-toggle" type="button" data-password-toggle="confirmPassword" aria-label="Show password"><i class="fas fa-eye"></i></button>
+            </div>
+          </div>
+
+          <div class="auth-message" id="authMessage" role="status" aria-live="polite" hidden></div>
+
+          <button class="btn auth-submit" id="authSubmit" type="submit">
+            <i class="fas fa-right-to-bracket"></i> Log in
+          </button>
+        </form>
+
+        <p class="auth-note">No two-factor authentication is required. Registration uses the secure Supabase Auth user database.</p>
+      </section>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="app.js"></script>
+  <script src="assets/js/common.js"></script>
+</body>
+</html>

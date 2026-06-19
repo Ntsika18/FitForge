@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+  <title>Fitness Tips | FitForge</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-protected="true">
+<div class="app">
+  <header class="header">
+    <div class="logo"><i class="fas fa-dumbbell"></i> FitForge</div>
+    <div class="header-actions">
+      <span class="user-email" id="userEmail" aria-label="Signed-in account"></span>
+      <button class="theme-btn" id="themeBtn" type="button">
+        <i class="fas fa-moon" id="themeIcon"></i>
+        <span id="themeLabel">Dark</span>
+      </button>
+      <button class="account-btn" id="logoutBtn" type="button" hidden>
+        <i class="fas fa-arrow-right-from-bracket"></i>
+        <span>Log out</span>
+      </button>
+    </div>
+  </header>
+
+  <section class="page active" id="page-tips">
+    <div class="page-heading">
+      <h1>Fitness Tips</h1>
+      <p>Science-backed advice to accelerate results</p>
+    </div>
+
+    <div class="tips-grid">
+
+      <div class="tip-card">
+        <img class="tip-img"
+          src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&q=80"
+          alt="Person doing squats in gym" loading="lazy">
+        <div class="tip-body">
+          <span class="tip-tag">Recovery</span>
+          <div class="tip-title">Rest Days Are When You Grow</div>
+          <p class="tip-text">Muscle fibres repair during rest, not during training. Aim for 1–2 full rest days per week, prioritise 7–9 hours of sleep, and include active recovery (walking, stretching) to flush lactic acid and reduce DOMS.</p>
+        </div>
+      </div>
+
+      <div class="tip-card">
+        <img class="tip-img"
+          src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&q=80"
+          alt="Dumbbells and water bottle on gym floor" loading="lazy">
+        <div class="tip-body">
+          <span class="tip-tag">Nutrition</span>
+          <div class="tip-title">Protein Timing Matters</div>
+          <p class="tip-text">Consuming 20–40 g of protein within 90 minutes post-workout maximises muscle protein synthesis. Spread total daily protein (0.8–1 g per lb of bodyweight) across 4–5 meals to maintain a positive nitrogen balance all day.</p>
+        </div>
+      </div>
+
+      <div class="tip-card">
+        <img class="tip-img"
+          src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1?w=800&q=80"
+          alt="Person doing pull-ups" loading="lazy">
+        <div class="tip-body">
+          <span class="tip-tag">Progressive Overload</span>
+          <div class="tip-title">Add 2.5 kg Every Two Weeks</div>
+          <p class="tip-text">The simplest path to strength gains: add a small amount of weight every two weeks on your main lifts. If you can't add weight, add a rep. Log every session — what gets measured gets improved.</p>
+        </div>
+      </div>
+
+      <div class="tip-card">
+        <img class="tip-img"
+          src="https://images.unsplash.com/photo-1552196563-55cd4e45efb3?w=800&q=80"
+          alt="Person stretching on yoga mat" loading="lazy">
+        <div class="tip-body">
+          <span class="tip-tag">Mobility</span>
+          <div class="tip-title">10-Minute Morning Mobility Routine</div>
+          <p class="tip-text">A brief morning routine covering hip flexors, thoracic spine, and ankle mobility dramatically reduces injury risk and improves performance in every compound lift. Consistency over intensity — every day beats once a week.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <nav class="bottom-nav" aria-label="Primary navigation">
+    <a class="nav-item" href="index.html" id="nav-workout">
+      <i class="fas fa-dumbbell"></i>
+      Workout
+    </a>
+    <a class="nav-item" href="scanner.html" id="nav-scanner">
+      <i class="fas fa-barcode"></i>
+      Scanner
+    </a>
+    <a class="nav-item" href="saved.html" id="nav-saved">
+      <i class="fas fa-bookmark"></i>
+      Saved
+    </a>
+    <a class="nav-item" href="fitbot.html" id="nav-fitbot">
+      <i class="fas fa-robot"></i>
+      FitBot
+    </a>
+    <a class="nav-item active" href="tips.html" id="nav-tips" aria-current="page">
+      <i class="fas fa-lightbulb"></i>
+      Tips
+    </a>
+  </nav>
+</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="app.js"></script>
+  <script src="assets/js/common.js"></script>
+</body>
+</html>
